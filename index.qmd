@@ -28,14 +28,53 @@ To build sustainable, general-purpose software infrastructure for the neuroscien
 * Multiphoton imaging analysis
 :::
 
-## What we do
-* Data standardisation and management
-* Extracellular electrophysiology analysis
-* **Computational neuroanatomy**
-* **Video behavioural analysis**
-* **Multiphoton imaging analysis**
+
+# Data management
+
+![](img/data-organisation-over-time.jpg)
+
+::: footer
+Image source: [ErrantScience](https://errantscience.com/)
+:::
+
+## The NeuroBlueprint specification {.smaller}
+
+![](img/NeuroBlueprint_project_tree_light.png)
 
 
+::: footer
+[neuroblueprint.neuroinformatics.dev](https://neuroblueprint.neuroinformatics.dev/){fig-align="center"}
+:::
+
+## `datashuttle` {.smaller}
+
+:::: {.columns}
+
+::: {.column width="60%"}
+![](img/datashuttle-overview-light.png){fig-align=left}
+:::
+
+::: {.column width="40%"}
+
+::: {.fragment}
+- Validate existing projects
+- Create and configure new projects
+- Create folders with real-time validation
+- Upload and download data
+- Keep logs of all actions
+:::
+
+:::
+::::
+
+::: footer
+[datashuttle.neuroinformatics.dev](https://datashuttle.neuroinformatics.dev/){fig-align="center"}
+:::
+
+
+## `datashuttle` TUI {.smaller}
+
+![TUI: Terminal User Interface | Works cross-platform, including on HPC](img/datashuttle-tui-transfer.png){fig-align=left}
 
 
 # Anatomy
