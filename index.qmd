@@ -1,6 +1,6 @@
 ---
-title: Software infrastructure for the neuroscience community
-subtitle: IBL Meeting 2026
+title: Building Community-Driven Software for Neuroscience
+subtitle: Flatiron CCN Software Workshop
 author: Adam Tyson 
 format:
   revealjs:
