@@ -107,6 +107,12 @@ Three aims:
 [Claudi, Petrucco, Tyson et al. JOSS (2020)](https://doi.org/10.21105/joss.02668)
 :::
 
+## Building novel atlases
+![](img/blackcap_atlas.gif){fig-align="center"}
+
+::: footer
+[Sirmpilatze, Felder, Abdulazhanova et al. Current Biology (2026)](https://doi.org/10.1016/j.cub.2026.03.034)
+:::
 
 ## Community
 :::{.incremental}
