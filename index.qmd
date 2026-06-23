@@ -7,15 +7,20 @@ format:
     footer: "[neuroinformatics.dev](https://neuroinformatics.dev/)"
 ---
 
-#
 
-To build sustainable, general-purpose software infrastructure for the neuroscience community
 
 # About us
 
 ## Neuroinformatics Unit
 
 (Systems) neuroscience & machine learning **research software engineering** group
+
+
+## Neuroinformatics Unit
+
+(Systems) neuroscience & machine learning **research software engineering** group
+
+Build sustainable, general-purpose software infrastructure for the neuroscience community
 
 
 
