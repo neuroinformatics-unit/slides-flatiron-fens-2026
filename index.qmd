@@ -31,6 +31,10 @@ format:
 :::{.fragment}
 - (Systems) neuroscience & machine learning **research software engineering** group
 :::
+:::{.fragment}
+- Build sustainable, general-purpose software infrastructure for the neuroscience community
+
+:::
 
 :::
 ::: {.column width="60"}
