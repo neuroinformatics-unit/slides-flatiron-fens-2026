@@ -43,13 +43,6 @@ format:
 :::
 
 
-## Neuroinformatics Unit
-
-(Systems) neuroscience & machine learning **research software engineering** group
-
-Build sustainable, general-purpose software infrastructure for the neuroscience community
-
-
 ## What we do
 :::{.incremental}
 - **Data analysis software** (anatomy, electrophysiology, functional imaging, behaviour)
