@@ -342,7 +342,7 @@ Brain Atlas
 ![](img/photon-mosaic.png){fig-align="center"}
 
 ::: footer
-[github.com/photon-mosaic](https://github.com/photon-mosaic)
+[photon-mosaic.org](https://photon-mosaic.org/)
 :::
 
 ## Long-term priorities
