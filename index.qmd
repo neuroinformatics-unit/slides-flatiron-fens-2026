@@ -381,6 +381,10 @@ Brain Atlas
 :::
 
 ## Long-term priorities
+
+## Long-term priorities
+### (Why I'm here)
+
 :::{.incremental}
 - Bring community together
 - Reduce duplication of effort
