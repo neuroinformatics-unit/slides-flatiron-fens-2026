@@ -338,9 +338,6 @@ Brain Atlas
 # Behaviour
 
 
-
-
-
 ## Computer vision for behaviour
 
 ![](img/gap_after_tracking.png){style="clip-path: inset(0 43% 0 0);"}
