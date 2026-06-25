@@ -10,7 +10,7 @@
   <meta name="generator" content="quarto-1.9.38">
 
   <meta name="author" content="Adam Tyson">
-  <title>Software infrastructure for the neuroscience community</title>
+  <title>Building Community-Driven Software for Neuroscience</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
@@ -31,6 +31,72 @@
       margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
       vertical-align: middle;
     }
+    /* CSS for syntax highlighting */
+    html { -webkit-text-size-adjust: 100%; }
+    pre > code.sourceCode { white-space: pre; position: relative; }
+    pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+    pre > code.sourceCode > span:empty { height: 1.2em; }
+    .sourceCode { overflow: visible; }
+    code.sourceCode > span { color: inherit; text-decoration: inherit; }
+    div.sourceCode { margin: 1em 0; }
+    pre.sourceCode { margin: 0; }
+    @media screen {
+    div.sourceCode { overflow: auto; }
+    }
+    @media print {
+    pre > code.sourceCode { white-space: pre-wrap; }
+    pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+    }
+    pre.numberSource code
+      { counter-reset: source-line 0; }
+    pre.numberSource code > span
+      { position: relative; left: -4em; counter-increment: source-line; }
+    pre.numberSource code > span > a:first-child::before
+      { content: counter(source-line);
+        position: relative; left: -1em; text-align: right; vertical-align: baseline;
+        border: none; display: inline-block;
+        -webkit-touch-callout: none; -webkit-user-select: none;
+        -khtml-user-select: none; -moz-user-select: none;
+        -ms-user-select: none; user-select: none;
+        padding: 0 4px; width: 4em;
+      }
+    pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+    div.sourceCode
+      { color: #383a42;  }
+    @media screen {
+    pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+    }
+    code span { color: #383a42; } /* Normal */
+    code span.al { color: #95da4c; background-color: #4d1f24; font-weight: bold; } /* Alert */
+    code span.an { color: #50a14f; } /* Annotation */
+    code span.at { color: #a626a4; } /* Attribute */
+    code span.bn { color: #986801; } /* BaseN */
+    code span.bu { color: #a626a4; } /* BuiltIn */
+    code span.cf { color: #a626a4; } /* ControlFlow */
+    code span.ch { color: #50a14f; } /* Char */
+    code span.cn { color: #986801; } /* Constant */
+    code span.co { color: #a0a1a7; font-style: italic; } /* Comment */
+    code span.cv { color: #e45649; font-style: italic; } /* CommentVar */
+    code span.do { color: #e45649; } /* Documentation */
+    code span.dt { color: #a626a4; } /* DataType */
+    code span.dv { color: #986801; } /* DecVal */
+    code span.er { color: #f44747; text-decoration: underline; } /* Error */
+    code span.ex { color: #4078f2; font-weight: bold; } /* Extension */
+    code span.fl { color: #986801; } /* Float */
+    code span.fu { color: #4078f2; } /* Function */
+    code span.im { color: #50a14f; } /* Import */
+    code span.in { color: #c45b00; } /* Information */
+    code span.kw { color: #a626a4; } /* Keyword */
+    code span.op { color: #a626a4; } /* Operator */
+    code span.ot { color: #27ae60; } /* Other */
+    code span.pp { color: #a626a4; } /* Preprocessor */
+    code span.re { color: #2980b9; background-color: #153042; } /* RegionMarker */
+    code span.sc { color: #0184bc; } /* SpecialChar */
+    code span.ss { color: #da4453; } /* SpecialString */
+    code span.st { color: #50a14f; } /* String */
+    code span.va { color: #e45649; } /* Variable */
+    code span.vs { color: #da4453; } /* VerbatimString */
+    code span.wa { color: #da4453; } /* Warning */
   </style>
   <link rel="stylesheet" href="index_files/libs/revealjs/dist/theme/quarto-2e9c2b88267167b91cc81db932c94e8e.css">
   <link href="index_files/libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
@@ -133,8 +199,8 @@
     <div class="slides">
 
 <section id="title-slide" data-background-color="#000000" data-background-image="img/swc-building.jpg" data-background-opacity="0.6" data-background-position="center" data-background-size="cover" class="quarto-title-block center">
-  <h1 class="title">Software infrastructure for the neuroscience community</h1>
-  <p class="subtitle">IBL Meeting 2026</p>
+  <h1 class="title">Building Community-Driven Software for Neuroscience</h1>
+  <p class="subtitle">Flatiron CCN Software Workshop</p>
 
 <div class="quarto-title-authors">
 <div class="quarto-title-author">
@@ -145,39 +211,134 @@ Adam Tyson
 </div>
 
 </section>
-<section id="section" class="title-slide slide level1 center">
-<h1></h1>
-<p>To build sustainable, general-purpose software infrastructure for the neuroscience community</p>
-</section>
-
 <section>
 <section id="about-us" class="title-slide slide level1 center">
 <h1>About us</h1>
 
 </section>
-<section id="neuroinformatics-unit" class="slide level2">
+<section id="neuroinformatics-unit" class="slide level2 smaller">
+<h2>Neuroinformatics Unit</h2>
+<div class="columns">
+<div class="column" style="width:40%;">
+<ul>
+<li>Sainsbury Wellcome Centre &amp; Gatsby Computational Neuroscience Unit, UCL (London)</li>
+</ul>
+</div><div class="column" style="width:60%;">
+<p><img data-src="img/SWC.jpg"></p>
+</div></div>
+</section>
+<section id="neuroinformatics-unit-1" class="slide level2 smaller">
+<h2>Neuroinformatics Unit</h2>
+<div class="columns">
+<div class="column" style="width:40%;">
+<ul>
+<li>Sainsbury Wellcome Centre &amp; Gatsby Computational Neuroscience Unit, UCL (London)</li>
+</ul>
+<div class="fragment">
+<ul>
+<li>(Systems) neuroscience &amp; machine learning <strong>research software engineering</strong> group</li>
+</ul>
+</div>
+</div><div class="column" style="width:60;">
+<p><img data-src="img/SWC_map_pin.png"></p>
+</div></div>
+</section>
+<section id="neuroinformatics-unit-2" class="slide level2">
 <h2>Neuroinformatics Unit</h2>
 <p>(Systems) neuroscience &amp; machine learning <strong>research software engineering</strong> group</p>
+<p>Build sustainable, general-purpose software infrastructure for the neuroscience community</p>
 </section>
 <section id="what-we-do" class="slide level2">
 <h2>What we do</h2>
 <ul>
+<li class="fragment"><strong>Data analysis software</strong> (anatomy, electrophysiology, functional imaging, behaviour)</li>
+<li class="fragment"><strong>Data management</strong> (specifications, tools)</li>
+<li class="fragment"><strong>Collaborations</strong> (data science, software development, productionisation)</li>
+<li class="fragment"><strong>Open source contributions</strong> (community tools, infrastructure)</li>
+</ul>
+</section>
+<section id="current-priorities" class="slide level2">
+<h2>Current priorities</h2>
+<ul>
 <li class="fragment">Data standardisation and management</li>
-<li class="fragment">Extracellular electrophysiology analysis</li>
 <li class="fragment">Computational neuroanatomy</li>
 <li class="fragment">Video behavioural analysis</li>
 <li class="fragment">Multiphoton imaging analysis</li>
 </ul>
+</section></section>
+<section>
+<section id="data-management" class="title-slide slide level1 center">
+<h1>Data management</h1>
+
+<img data-src="img/data-organisation-over-time.jpg" class="r-stretch"><div class="absolute" style="text-align: right; font-size: 0.5em;bottom: -10%; right: 0%; ">
+<p>Image source: <a href="https://errantscience.com/">ErrantScience</a></p>
+</div>
 </section>
-<section id="what-we-do-1" class="slide level2">
-<h2>What we do</h2>
+<section id="the-neuroblueprint-specification" class="slide level2 smaller">
+<h2>The NeuroBlueprint specification</h2>
+
+<img data-src="img/NeuroBlueprint_project_tree_light.png" class="r-stretch"><div class="footer">
+<p><a href="https://neuroblueprint.neuroinformatics.dev/" data-fig-align="center">neuroblueprint.neuroinformatics.dev</a></p>
+</div>
+</section>
+<section id="datashuttle" class="slide level2 smaller">
+<h2><code>datashuttle</code></h2>
+<div class="columns">
+<div class="column" style="width:60%;">
+<div class="quarto-figure quarto-figure-left">
+<figure>
+<p><img data-src="img/datashuttle-overview-light.png" class="quarto-figure quarto-figure-left"></p>
+</figure>
+</div>
+</div><div class="column" style="width:40%;">
+<div class="fragment">
 <ul>
-<li>Data standardisation and management</li>
-<li>Extracellular electrophysiology analysis</li>
-<li><strong>Computational neuroanatomy</strong></li>
-<li><strong>Video behavioural analysis</strong></li>
-<li><strong>Multiphoton imaging analysis</strong></li>
+<li>Validate existing projects</li>
+<li>Create and configure new projects</li>
+<li>Create folders with real-time validation</li>
+<li>Upload and download data</li>
+<li>Keep logs of all actions</li>
 </ul>
+</div>
+</div></div>
+<div class="absolute" style="text-align: right; font-size: 0.71em;bottom: 0%; right: 0%; ">
+<p><a href="https://doi.org/10.21105/joss.09642">Ziminski et al.&nbsp;JOSS (2026)</a></p>
+</div>
+<div class="footer">
+<p><a href="https://datashuttle.neuroinformatics.dev/" data-fig-align="center">datashuttle.neuroinformatics.dev</a></p>
+</div>
+</section>
+<section id="python-api" class="slide level2">
+<h2>Python API</h2>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href=""></a><span class="im">from</span> datashuttle <span class="im">import</span> DataShuttle</span>
+<span id="cb1-2"><a href=""></a></span>
+<span id="cb1-3"><a href=""></a>project <span class="op">=</span> DataShuttle(<span class="st">"my_first_project"</span>)</span>
+<span id="cb1-4"><a href=""></a>project.make_config_file(</span>
+<span id="cb1-5"><a href=""></a>    local_path<span class="op">=</span><span class="vs">r"C:</span><span class="er">\</span><span class="vs">Users</span><span class="er">\</span><span class="vs">Joe</span><span class="dv">\d</span><span class="vs">ata</span><span class="er">\</span><span class="vs">local</span><span class="dv">\m</span><span class="vs">y_first_project"</span>,</span>
+<span id="cb1-6"><a href=""></a>    central_path<span class="op">=</span><span class="vs">r"C:</span><span class="er">\</span><span class="vs">Users</span><span class="er">\</span><span class="vs">Joe</span><span class="dv">\d</span><span class="vs">ata</span><span class="er">\</span><span class="vs">central</span><span class="dv">\m</span><span class="vs">y_first_project"</span>,</span>
+<span id="cb1-7"><a href=""></a>    connection_method<span class="op">=</span><span class="st">"local_filesystem"</span>,</span>
+<span id="cb1-8"><a href=""></a>)</span>
+<span id="cb1-9"><a href=""></a>project.create_folders(</span>
+<span id="cb1-10"><a href=""></a>    top_level_folder<span class="op">=</span><span class="st">"rawdata"</span>,</span>
+<span id="cb1-11"><a href=""></a>    sub_names<span class="op">=</span><span class="st">"sub-001"</span>,</span>
+<span id="cb1-12"><a href=""></a>    ses_names<span class="op">=</span><span class="st">"ses-001_@DATE@"</span>,</span>
+<span id="cb1-13"><a href=""></a>    datatype<span class="op">=</span>[<span class="st">"behav"</span>, <span class="st">"ephys"</span>]</span>
+<span id="cb1-14"><a href=""></a>)</span>
+<span id="cb1-15"><a href=""></a></span>
+<span id="cb1-16"><a href=""></a>project.upload_entire_project()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="absolute" style="text-align: right; font-size: 0.5em;bottom: 0%; right: 0%; ">
+<p><a href="https://doi.org/10.21105/joss.09642">Ziminski et al.&nbsp;JOSS (2026)</a></p>
+</div>
+<div class="footer">
+<p><a href="https://datashuttle.neuroinformatics.dev/" data-fig-align="center">datashuttle.neuroinformatics.dev</a></p>
+</div>
+</section>
+<section id="terminal-user-interface" class="slide level2">
+<h2>Terminal user interface</h2>
+<p><video data-src="img/datashuttle-gif-light.mp4" class="absolute nostretch" style="top: 23%; left: 10%; width: 80%; " loop="true" controls=""><a href="img/datashuttle-gif-light.mp4">Video</a></video></p>
+<div class="absolute" style="text-align: right; font-size: 0.5em;bottom: 0%; right: 0%; ">
+<p><a href="https://doi.org/10.21105/joss.09642">Ziminski et al.&nbsp;JOSS (2026)</a></p>
+</div>
 </section></section>
 <section>
 <section id="anatomy" class="title-slide slide level1 center">
@@ -204,8 +365,249 @@ Adam Tyson
 <section id="brainglobe-atlas-api" class="slide level2">
 <h2>BrainGlobe Atlas API</h2>
 
-<img data-src="img/atlas.png" class="quarto-figure quarto-figure-center r-stretch"><div class="footer">
-<p><a href="https://doi.org/10.21105/joss.02668">Claudi, Petrucco, Tyson et al.&nbsp;JOSS (2020)</a></p>
+<img data-src="img/atlas.png" class="quarto-figure quarto-figure-center r-stretch"><div class="absolute" style="text-align: right; font-size: 0.5em;bottom: 0%; right: 0%; ">
+<p><a href="https://doi.org/10.21105/joss.02668">Claudi et al.&nbsp;JOSS (2020)</a></p>
+</div>
+<div class="footer">
+<p><a href="https://brainglobe.info/documentation/brainglobe-atlasapi">brainglobe.info/documentation/brainglobe-atlasapi</a></p>
+</div>
+</section>
+<section id="whole-brain-registration" class="slide level2">
+<h2>Whole-brain registration</h2>
+<p><img data-src="img/brainreg.png" class="absolute" style="top: 20%; left: 5%; width: 90%; "></p>
+<div style="background: #ffffff; width: 15%; height: 65%; margin: 0px; position: absolute; top: 23%; right: 6%">
+
+</div>
+<div class="absolute" style="font-size: 0.7em;top: 32%; left: 79%; ">
+<p>Allen Mouse<br> Brain Atlas</p>
+</div>
+<div class="absolute" style="font-size: 0.7em;top: 65%; left: 79%; ">
+<p>Enhanced and<br> Unified Mouse<br> Brain Atlas</p>
+</div>
+<div class="absolute" style="text-align: right; font-size: 0.5em;bottom: 0%; right: 0%; ">
+<p><a href="https://doi.org/10.1038/s41598-021-04676-9">Tyson et al.&nbsp;(2022) Sci Rep</a></p>
+</div>
+<div class="footer">
+<p><a href="https://brainglobe.info/documentation/brainreg/index.html">brainglobe.info/documentation/brainreg</a></p>
+</div>
+</section>
+<section id="spatial-analysis" class="slide level2">
+<h2>Spatial analysis</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="img/brainglobe-segmentation.png" class="quarto-figure quarto-figure-center" style="width:90.0%"></p>
+</figure>
+</div>
+<div class="absolute" style="text-align: right; font-size: 0.5em;bottom: 0%; right: 0%; ">
+<p><a href="https://doi.org/10.1038/s41598-021-04676-9">Tyson et al.&nbsp;(2022) Sci Rep</a></p>
+</div>
+<div class="footer">
+<p><a href="https://brainglobe.info/documentation/brainglobe-segmentation/index.html">brainglobe.info/documentation/brainglobe-segmentation</a></p>
+</div>
+</section>
+<section id="d-cell-detection" class="slide level2">
+<h2>3D cell detection</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="img/raw.png" class="quarto-figure quarto-figure-center" style="width:70.0%"></p>
+</figure>
+</div>
+<div class="absolute" style="text-align: right; font-size: 0.5em;bottom: 0%; right: 0%; ">
+<p><a href="https://doi.org/10.1371/journal.pcbi.1009074">Tyson et al.&nbsp;(2021) PLoS Comp Biol</a></p>
+</div>
+<div class="footer">
+<p><a href="https://brainglobe.info/documentation/cellfinder/index.html">brainglobe.info/documentation/cellfinder</a></p>
+</div>
+</section>
+<section id="d-cell-detection-1" class="slide level2">
+<h2>3D cell detection</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="img/classify.png" class="quarto-figure quarto-figure-center" style="width:70.0%"></p>
+</figure>
+</div>
+<div class="absolute" style="text-align: right; font-size: 0.5em;bottom: 0%; right: 0%; ">
+<p><a href="https://doi.org/10.1371/journal.pcbi.1009074">Tyson et al.&nbsp;(2021) PLoS Comp Biol</a></p>
+</div>
+<div class="footer">
+<p><a href="https://brainglobe.info/documentation/cellfinder/index.html">brainglobe.info/documentation/cellfinder</a></p>
+</div>
+</section>
+<section id="d-cell-detection-2" class="slide level2">
+<h2>3D cell detection</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="img/cells.png" class="quarto-figure quarto-figure-center" style="width:70.0%"></p>
+</figure>
+</div>
+<div class="footer">
+<p><a href="https://brainglobe.info/documentation/brainglobe-workflows/brainmapper/index.html">brainglobe.info/documentation/brainglobe-workflows/brainmapper</a></p>
+</div>
+</section>
+<section id="d-cell-detection-3" class="slide level2 smaller">
+<h2>3D cell detection</h2>
+<style>
+.tight-table table { width: auto !important; margin: 0 auto; }
+.tight-table th, .tight-table td { white-space: nowrap; padding: 0.1em 0.10em; }
+</style>
+<div class="tight-table" style="font-size: 0.6em">
+<table class="caption-top">
+<colgroup>
+<col style="width: 13%">
+<col style="width: 17%">
+<col style="width: 17%">
+<col style="width: 17%">
+<col style="width: 17%">
+<col style="width: 17%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Structure Name</th>
+<th style="text-align: right;">Left Cells</th>
+<th style="text-align: right;">Right Cells</th>
+<th style="text-align: right;">Total Cells</th>
+<th style="text-align: right;">Left Cells/mm³</th>
+<th style="text-align: right;">Right Cells/mm³</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Primary visual area, layer 2/3</td>
+<td style="text-align: right;">964</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">965</td>
+<td style="text-align: right;">927</td>
+<td style="text-align: right;">1</td>
+</tr>
+<tr class="even">
+<td>Primary visual area, layer 5</td>
+<td style="text-align: right;">644</td>
+<td style="text-align: right;">6</td>
+<td style="text-align: right;">650</td>
+<td style="text-align: right;">669</td>
+<td style="text-align: right;">6</td>
+</tr>
+<tr class="odd">
+<td>Dorsal part of the lateral geniculate complex, core</td>
+<td style="text-align: right;">371</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">371</td>
+<td style="text-align: right;">1481</td>
+<td style="text-align: right;">0</td>
+</tr>
+<tr class="even">
+<td>Lateral posterior nucleus of the thalamus</td>
+<td style="text-align: right;">240</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">240</td>
+<td style="text-align: right;">320</td>
+<td style="text-align: right;">0</td>
+</tr>
+<tr class="odd">
+<td>Primary visual area, layer 4</td>
+<td style="text-align: right;">207</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">207</td>
+<td style="text-align: right;">349</td>
+<td style="text-align: right;">0</td>
+</tr>
+<tr class="even">
+<td>Retrosplenial area, ventral part, layer 5</td>
+<td style="text-align: right;">162</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">162</td>
+<td style="text-align: right;">182</td>
+<td style="text-align: right;">0</td>
+</tr>
+<tr class="odd">
+<td>Dorsal part of the lateral geniculate complex, shell</td>
+<td style="text-align: right;">122</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">122</td>
+<td style="text-align: right;">1007</td>
+<td style="text-align: right;">0</td>
+</tr>
+<tr class="even">
+<td>Lateral dorsal nucleus of thalamus</td>
+<td style="text-align: right;">121</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">122</td>
+<td style="text-align: right;">227</td>
+<td style="text-align: right;">2</td>
+</tr>
+<tr class="odd">
+<td>Retrosplenial area, dorsal part, layer 5</td>
+<td style="text-align: right;">110</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">110</td>
+<td style="text-align: right;">180</td>
+<td style="text-align: right;">0</td>
+</tr>
+<tr class="even">
+<td>Retrosplenial area, dorsal part, layer 6a</td>
+<td style="text-align: right;">89</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">89</td>
+<td style="text-align: right;">195</td>
+<td style="text-align: right;">0</td>
+</tr>
+<tr class="odd">
+<td>Laterointermediate area, layer 5</td>
+<td style="text-align: right;">53</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">53</td>
+<td style="text-align: right;">621</td>
+<td style="text-align: right;">0</td>
+</tr>
+<tr class="even">
+<td>Anterolateral visual area, layer 5</td>
+<td style="text-align: right;">50</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">51</td>
+<td style="text-align: right;">420</td>
+<td style="text-align: right;">8</td>
+</tr>
+<tr class="odd">
+<td>Primary visual area, layer 6a</td>
+<td style="text-align: right;">48</td>
+<td style="text-align: right;">3</td>
+<td style="text-align: right;">51</td>
+<td style="text-align: right;">73</td>
+<td style="text-align: right;">4</td>
+</tr>
+<tr class="even">
+<td>Retrosplenial area, ventral part, layer 6a</td>
+<td style="text-align: right;">49</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">49</td>
+<td style="text-align: right;">128</td>
+<td style="text-align: right;">0</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="footer">
+<p><a href="https://brainglobe.info/documentation/brainglobe-workflows/brainmapper/index.html">brainglobe.info/documentation/brainglobe-workflows/brainmapper</a></p>
+</div>
+</section>
+<section id="visualisation" class="slide level2">
+<h2>Visualisation</h2>
+<p><video data-src="img/cellfinder_small.mp4" class="absolute nostretch" style="top: 23%; left: 15%; width: 70%; " loop="true" controls=""><a href="img/cellfinder_small.mp4">Video</a></video></p>
+<div class="absolute" style="text-align: right; font-size: 0.4em;bottom: 0%; right: 0%; ">
+<p><a href="https://doi.org/10.7554/eLife.65751">Claudi et al.&nbsp;(2021) eLife</a></p>
+</div>
+<div class="footer">
+<p><a href="https://brainglobe.info/documentation/brainrender/index.html">brainglobe.info/documentation/brainrender</a></p>
+</div>
+</section>
+<section id="building-novel-atlases" class="slide level2">
+<h2>Building novel atlases</h2>
+
+<img data-src="img/blackcap_atlas.gif" class="quarto-figure quarto-figure-center r-stretch"><div class="absolute" style="text-align: right; font-size: 0.5em;bottom: 0%; right: 0%; ">
+<p><a href="https://doi.org/10.1016/j.cub.2026.03.034">Sirmpilatze et al.&nbsp;Current Biology (2026)</a></p>
+</div>
+<div class="footer">
+<p><a href="https://brainglobe.info/brainglobe-template-builder/index.html">brainglobe.info/brainglobe-template-builder</a></p>
 </div>
 </section>
 <section id="community" class="slide level2">
@@ -217,6 +619,7 @@ Adam Tyson
 <li class="fragment">Public development meetings</li>
 <li class="fragment">&gt;3M downloads</li>
 <li class="fragment">&gt;3k contributions from &gt;150 scientists &amp; engineers</li>
+<li class="fragment">&gt;80 dependent tools</li>
 </ul>
 <div class="footer">
 <p><a href="https://brainglobe.info">brainglobe.info</a></p>
