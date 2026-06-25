@@ -11,9 +11,32 @@ format:
 
 # About us
 
-## Neuroinformatics Unit
+## Neuroinformatics Unit{.smaller}
 
-(Systems) neuroscience & machine learning **research software engineering** group
+::: {.columns}
+::: {.column width="40%"}
+- Sainsbury Wellcome Centre & Gatsby Computational Neuroscience Unit, UCL (London)
+:::
+::: {.column width="60%"}
+![](img/SWC.jpg)
+:::
+:::
+
+## Neuroinformatics Unit{.smaller}
+
+::: {.columns}
+::: {.column width="40%"}
+- Sainsbury Wellcome Centre & Gatsby Computational Neuroscience Unit, UCL (London)
+
+:::{.fragment}
+- (Systems) neuroscience & machine learning **research software engineering** group
+:::
+
+:::
+::: {.column width="60"}
+![](img/SWC_map_pin.png)
+:::
+:::
 
 
 ## Neuroinformatics Unit
@@ -23,11 +46,17 @@ format:
 Build sustainable, general-purpose software infrastructure for the neuroscience community
 
 
-
 ## What we do
 :::{.incremental}
+- **Data analysis software** (anatomy, electrophysiology, functional imaging, behaviour)
+- **Data management** (specifications, tools)
+- **Collaborations** (data science, software development, productionisation)
+- **Open source contributions** (community tools, infrastructure)
+:::
+
+## Current priorities
+:::{.incremental}
 * Data standardisation and management
-* Extracellular electrophysiology analysis
 * Computational neuroanatomy
 * Video behavioural analysis
 * Multiphoton imaging analysis
@@ -72,6 +101,10 @@ Image source: [ErrantScience](https://errantscience.com/)
 :::
 ::::
 
+::: {.absolute right="0%" bottom="0%" style="text-align: right; font-size: 0.8em;"}
+[Ziminski et al. JOSS (2026)](https://doi.org/10.21105/joss.09642)
+:::
+
 ::: footer
 [datashuttle.neuroinformatics.dev](https://datashuttle.neuroinformatics.dev/){fig-align="center"}
 :::
@@ -79,8 +112,12 @@ Image source: [ErrantScience](https://errantscience.com/)
 
 ## `datashuttle` TUI {.smaller}
 
-![TUI: Terminal User Interface | Works cross-platform, including on HPC](img/datashuttle-tui-transfer.png){fig-align=left}
+![](img/datashuttle-gif-light.mp4){.absolute .nostretch top="23%" width="80%" left="10%" loop="true"}
 
+
+::: {.absolute right="0%" bottom="0%" style="text-align: right; font-size: 0.8em;"}
+[Ziminski et al. JOSS (2026)](https://doi.org/10.21105/joss.09642)
+:::
 
 # Anatomy
 ## BrainGlobe {.smaller}
