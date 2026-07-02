@@ -8,9 +8,6 @@ format:
 ---
 
 
-
-# About us
-
 ## Neuroinformatics Unit{.smaller}
 
 ::: {.columns}
